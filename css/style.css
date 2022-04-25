@@ -240,14 +240,14 @@ main {
 }
 @media (max-width: 600px) {
     .topo, .menu, .conteudo, .banner, {
-        width: 600px;
+        width: 500px;
     }
     .game-area {
         grid-template-columns: repeat(2, 1fr);
     }
     .banner {
-        width: 600px;
-        height: 158px;
+        width: 500px;
+        height: 132px;
         background-size: contain;
     }
     .gameWindowBody {
