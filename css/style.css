@@ -75,6 +75,8 @@ main {
 .conteudo {
 	width: 1330px;
     margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
 }
 .banner {
 	width: 1330px;
@@ -247,16 +249,15 @@ main {
     }
     .conteudo{
         width: 450px;
-        overflow: hidden;
     }
     .banner {
-        width: 450px;
+        width: 430px;
         background-size: contain;
-        height: 119px;
+        height: 113px;
     }
     .game-area {
         width: 400px;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
     .gameWindowArea {
         width: 100%;
@@ -271,6 +272,6 @@ main {
         display: block;
     }
     .modelo {
-        width: 250px;
+        width: 100px;
     }
 }
