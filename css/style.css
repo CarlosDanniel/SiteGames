@@ -246,8 +246,8 @@ main {
         grid-template-columns: repeat(2, 1fr);
     }
     .banner {
-        width: 500px;
-        height: 132px;
+        width: 350px;
+        height: 92px;
         background-size: contain;
     }
     .gameWindowBody {
