@@ -238,17 +238,9 @@ main {
     margin-left: 5px;
     margin-top: 5px;
 }
-.solo {
-    display: none;
-
-}
 @media (max-width: 600px) {
     .topo{
         width: 450px;
-    }
-    .solo{
-        display: flex;
-        justify-content: center;
     }
     .menu{
         width: 450px;
@@ -258,11 +250,13 @@ main {
         overflow: hidden;
     }
     .banner {
-        display: none;
+        width: 450px;
+        background-size: contain;
+        height: 119px;
     }
     .game-area {
-        width: 450px;
-        grid-template-columns: repeat(2, 1fr);
+        width: 400px;
+        grid-template-columns: repeat(2, 2fr);
     }
     .gameWindowArea {
         width: 100%;
@@ -277,6 +271,6 @@ main {
         display: block;
     }
     .modelo {
-        width: 200px;
+        width: 100px;
     }
 }
