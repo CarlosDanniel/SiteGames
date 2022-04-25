@@ -14,7 +14,7 @@ gameJson.map((item, index)=> {
 	gameItem.querySelector('.item-img img').src = item.img;
 	gameItem.querySelector('.nome').innerHTML = item.name;
 	gameItem.querySelector('.preço').innerHTML = `R$ ${item.price.toFixed(2)}`;
-	gameItem.querySelector('a').addEventListener('click', (e)=> {
+	gameItem.querySelector('.modelo a').addEventListener('click', (e)=> {
 		e.preventDefault();
 		let key = e.target.closest('.modelo').getAttribute('data-key');
 		modalKey = key;
@@ -22,6 +22,7 @@ gameJson.map((item, index)=> {
 		c('.gameInfo h1').innerHTML = gameJson[key].name;
 		c('.gameBig img').src = gameJson[key].img;
 		c('.gameInfo--actualPrice').innerHTML = `R$ ${gameJson[key].price.toFixed(2)}`;
+		c('.gameInfo--addButton a').href = item.link;
 
 
 		c('.gameWindowArea').style.opacity = 0;
@@ -42,11 +43,4 @@ function closeModal() {
 }
 cs('.gameInfo--cancelButton, .gameInfo--cancelMobileButton').forEach((item)=>{
 	item.addEventListener('click', closeModal);
-});
-c('.gameInfo--addButton').addEventListener('click', ()=>{
-	cart.push({
-		id:gameJson[modalKey].id,
-
-	});
-	closeModal();
 });
