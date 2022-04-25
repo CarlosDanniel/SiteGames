@@ -15,7 +15,50 @@ header {
 	width: 100%;
 	display: flex;
 	justify-content: center;
-
+}
+.menu-openner {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    background: linear-gradient(-45deg, red, blue);
+    animation: pulse 3s infinite;
+    border-radius: 40px;
+}
+.pulse {
+  animation: pulse 3s infinite;
+  margin: 0 auto;
+  display: table;
+  margin-top: 50px;
+  animation-direction: alternate;
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    filter: brightness(100%);
+  }
+  25% {
+    transform: scale(1.1);
+    filter: brightness(200%);
+  }
+  75% {
+    transform: scale(1.1);
+    filter: brightness(200%);
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(100%);
+  }
+}
+.menu-openner span {
+    margin-right:10px;
 }
 .topo {
 	width: 1330px;
@@ -31,15 +74,27 @@ header {
 .menu {
 	width: 1330px;
 	height: 67px;
-	background-color: gray;
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
+    justify-content: center;
 }
-.menu-openner {
-    width: 50px;
-    margin-right: 15px;
-    font-size: 26px;
-    border-radius: 5px;
+.menu div {
+    border: 3px solid blue;
+    padding: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: 30px;
+    font-family:'Hepta Slab', Helvetica, Arial;
+    background: linear-gradient(-45deg, red, blue );
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all ease 3s;
+    filter: brightness(50%);
+}
+.menu div:hover {
+    border: 3px solid red;
+    animation: pulse 3s infinite;
 }
 nav {
     width: 100%;
@@ -47,14 +102,22 @@ nav {
     justify-content: center;
 }
 aside {
-    background-color:#9ccbe6;
+    background: rgba(0, 0, 0, 0.3 );
+    backdrop-filter:  blur(5px);
     width:0vw;
     font-family:'Hepta Slab', Helvetica, Arial;
     transition:all ease .2s;
     overflow-x:hidden;
+    height: 100vh;
     position: fixed;
     right: 0px;
     top: 0px;
+}
+aside.show {
+    width:30vw;
+}
+.cart--area {
+    padding:20px;
 }
 section {
 	width: 100%;
@@ -240,9 +303,154 @@ main {
     margin-left: 5px;
     margin-top: 5px;
 }
+.gameInfo--qtarea {
+    display:inline-flex;
+    align-items: center;
+    background-color:#EEE;
+    border-radius:10px;
+    height:30px;
+}
+.gameInfo--qtarea button {
+    border:0;
+    background-color:transparent;
+    font-size:17px;
+    outline:0;
+    cursor:pointer;
+    padding:0px 10px;
+    color:#333;
+}
+.gameInfo--qt {
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0px 5px;
+    color:#000;
+}
+.cart {
+    margin-bottom:20px;
+}
+.cart--item {
+    display:flex;
+    align-items:center;
+    margin:10px 0;
+}
+.cart--item img {
+    width:40px;
+    height:40px;
+    margin-right:20px;
+}
+.cart--item-nome {
+    flex:1;
+}
+.cart--item--qtarea {
+    display:inline-flex;
+    background-color:#EEE;
+    border-radius:10px;
+    height:30px;
+    display: flex;
+    align-items: center;
+}
+.cart--item--qtarea{
+    font-size: 12px;
+    font-family:'Hepta Slab', Helvetica, Arial;
+    font-weight: bold;
+    color: black;
+}
+.gameInfo--qtarea span {
+    font-size: 12px;
+    font-family:'Hepta Slab', Helvetica, Arial;
+    font-weight: bold;
+    color: black;
+}
+.md {
+    margin-left: 10px;
+}
+.ml {
+    margin-right: 10px;
+}
+.cart--item--qt {
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0px 5px;
+    color:#000;
+}
+.cart--totalitem {
+    padding:15px 0;
+    border-top:1px solid white;
+    color:white;
+    display:flex;
+    justify-content: space-between;
+    font-size:15px;
+}
+.cart--totalitem span:first-child {
+    font-weight: bold;
+}
+.cart--totalitem.big {
+    font-size:20px;
+    color: white;
+    font-weight: bold;
+}
+.cart--finalizar {
+    padding:20px 30px;
+    border-radius:20px;
+    background-color:blue;
+    color:#FFF;
+    cursor:pointer;
+    text-align:center;
+    margin-top:20px;
+    transition: all ease 2s;
+}
+.cart--finalizar:hover {
+    background-color:red;
+}
+.menu-mob {
+    background: rgba(0, 0, 0, 0.3 );
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    font-size: 30px;
+    background: rgba(0, 0, 0, 0.3 );
+    backdrop-filter:  blur(5px);
+    display: none;
+    transition: all ease 1s;
+    overflow: hidden;
+}
+.menu-mob div {
+    border-bottom: 3px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.menu-mob span {
+    margin: 10px;
+}
+.openmen {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: none;
+}
+.openmen div{
+    width: 35px;
+    height: 5px;
+    background: linear-gradient(-35deg, red, blue );
+    margin: 6px 0;
+}
+.aberto {
+    width: 100%;
+}
 @media (max-width: 600px) {
     .topo{
         width: 450px;
+    }
+    .openmen {
+        display: block;
+    }
+    .menu-mob {
+        display: block;
+        width: 0px;
     }
     .menu{
         width: 450px;
@@ -260,15 +468,67 @@ main {
         grid-template-columns: repeat(1, 1fr);
     }
     .gameWindowArea {
-        width: 100%;
+        justify-content:flex-start;
+        align-items: flex-start;
     }
+
     .gameWindowBody {
-        width: 400px;
+        width:100vw;
+        height: 100vh;
+        display:block;
+        padding:20px;
+        border-radius:0;
+        box-shadow:none;
+        margin:0;
+        border: none;
     }
+
+    .gameBig img {
+        width: 75%;
+        height: auto;
+    }
+
+    .gameInfo h1 {
+        margin-top:20px;
+    }
+
+    .gameInfo--qtarea {
+        height:60px;
+    }
+    .gameInfo--qtarea button {
+        font-size:25px;
+        padding:0px 25px;
+    }
+    .gameInfo--qt {
+        line-height: 60px;
+        font-size:20px;
+    }
+    .gameInfo--addButton {
+        font-size:20px;
+        display:block;
+        text-align:center;
+        margin:30px auto;
+    }
+
     .gameInfo--cancelButton {
-        display: none;
+        display:none;
     }
-    .gameInfo--cancelMobileButton{
-        display: block;
+    .gameInfo--cancelMobileButton {
+        display:block;
+    }
+    aside.show {
+        width: 100vw;
+    }
+    .menu-openner span {
+        margin-right: 3px;
+    }
+    .menu-openner {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+        border-radius: 40px;
+    }
+    .menu {
+        display: none;
     }
 }
