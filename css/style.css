@@ -239,24 +239,37 @@ main {
     margin-top: 5px;
 }
 @media (max-width: 600px) {
-    .topo, .menu, .conteudo, .banner, {
-        width: 500px;
+    .topo{
+        width: 450px;
+    }
+    .menu{
+        width: 450px;
+    }
+    .conteudo{
+        width: 450px;
     }
     .game-area {
+        width: 450px;
         grid-template-columns: repeat(2, 1fr);
     }
     .banner {
-        width: 350px;
-        height: 92px;
+        width: 450px;
+        height: 119px;
         background-size: contain;
     }
+    .gameWindowArea {
+        width: 450px;
+    }
     .gameWindowBody {
-        width: 400px;
+        width: 450px;
     }
     .gameInfo--cancelButton {
         display: none;
     }
     .gameInfo--cancelMobileButton{
         display: block;
+    }
+    .modelo {
+        width: 200px;
     }
 }
