@@ -258,10 +258,10 @@ main {
         background-size: contain;
     }
     .gameWindowArea {
-        width: 450px;
+        width: 100%;
     }
     .gameWindowBody {
-        width: 450px;
+        width: 400px;
     }
     .gameInfo--cancelButton {
         display: none;
