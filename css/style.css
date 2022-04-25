@@ -238,24 +238,31 @@ main {
     margin-left: 5px;
     margin-top: 5px;
 }
+.solo {
+    display: none;
+
+}
 @media (max-width: 600px) {
     .topo{
         width: 450px;
+    }
+    .solo{
+        display: flex;
+        justify-content: center;
     }
     .menu{
         width: 450px;
     }
     .conteudo{
         width: 450px;
+        overflow: hidden;
+    }
+    .banner {
+        display: none;
     }
     .game-area {
         width: 450px;
         grid-template-columns: repeat(2, 1fr);
-    }
-    .banner {
-        width: 450px;
-        height: 119px;
-        background-size: contain;
     }
     .gameWindowArea {
         width: 100%;
