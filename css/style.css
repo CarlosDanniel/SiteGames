@@ -72,29 +72,98 @@ header {
 	margin-left: 20px;
 }
 .menu {
-	width: 1330px;
-	height: 67px;
+    width: 1330px;
+    height: 67px;
+}
+.menuint {
+    width: 1000px;
+    height: 67px;
+    margin: auto;
     display: flex;
-    align-items: center;
-    margin-bottom: 20px;
     justify-content: center;
+    align-items: center;
 }
-.menu div {
-    border: 3px solid blue;
-    padding: 10px;
-    margin-left: 25px;
-    margin-right: 25px;
+.menu ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+.menu li {
+    float: left;
     font-size: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    border-right: 3px solid blue;
+    border-left: 3px solid blue;
     font-family:'Hepta Slab', Helvetica, Arial;
-    background: linear-gradient(-45deg, red, blue );
-    font-weight: bold;
-    border-radius: 30px;
-    transition: all ease 3s;
-    filter: brightness(50%);
+    cursor: pointer;
 }
-.menu div:hover {
-    border: 3px solid red;
-    animation: pulse 3s infinite;
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+.submenu {
+    width: 187px;
+    height: 214px;
+    position: absolute;
+    margin-top: 10px;
+    display: none;
+}
+.submenu li {
+    border: none;
+}
+.menu li:hover .submenu{
+    display: block;
+}
+.menumobopen {
+    height: 0px;
+    overflow: hidden;
+    transition: all ease 0.5s;
+}
+.menumobopen ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+.menumobopen li {
+    margin-top: 10px;
+}
+.menumobopen1 {
+    height: 0px;
+    overflow: hidden;
+    transition: all ease 0.5s;
+}
+.menumobopen1 ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+.menumobopen1 li {
+    margin-top: 10px;
+}
+.menumobopen2 {
+    height: 0px;
+    overflow: hidden;
+    transition: all ease 0.5s;
+}
+.menumobopen2 ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+.menumobopen2 li {
+    margin-top: 10px;
+}
+.abrir{
+  height: 180px;
+}
+.abrir1{
+  height: 120px;
+}
+.click ul a {
+    color: white;
+    text-decoration: none;
 }
 nav {
     width: 100%;
