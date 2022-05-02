@@ -100,6 +100,15 @@ function updateCart() {
 			cartItem.querySelector('img').src = gameItem.img;
 			cartItem.querySelector('.cart--item-nome').innerHTML = gameItem.name;
 			cartItem.querySelector('.cart--item--qt').innerHTML = cart[i].qt;
+			cartItem.querySelector('.md').addEventListener('click', ()=> {
+
+			if (cart[i].qt>1) {
+				cart[i].qt--;
+			} else {
+				cart.splice(i, 1);
+			}
+			updateCart();
+			});
 
 			c('.cart').append(cartItem);
 		}
