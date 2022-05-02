@@ -250,14 +250,14 @@ main {
 	margin-top: 5px;
 }
 .item-add {
-    width:50px;
+    width:100px;
     height:50px;
     line-height:50px;
     border-radius:25px;
     background-color:#0027ff;
     text-align:center;
     color:#FFF;
-    font-size:22px;
+    font-size:10px;
     cursor:pointer;
     margin-top:-25px;
     transition:all ease 1s;
